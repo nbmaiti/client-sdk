@@ -71,7 +71,8 @@ int32_t crypto_hal_ecdsa_sign(const uint8_t *data, size_t data_len,
 	}
 
 	if (!ENGINE_ctrl_cmd_string(engine, "LOAD", NULL, 0)) {
-		LOG(LOG_ERROR, "Could not load TPM engine.\n");
+		LOG(LOG_ERROR, "Could not load TPM engine.at path %s\n",
+		    TPM2_TSS_ENGINE_SO_PATH);
 		goto error;
 	}
 
