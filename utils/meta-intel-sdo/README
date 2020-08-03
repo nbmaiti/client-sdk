@@ -1,0 +1,27 @@
+This README file contains information on the contents of the meta-intel-sdo layer.
+
+This layer include intel-ssecure device onboarding for yocto build.
+https://github.com/secure-device-onboard/client-sdk
+
+Default configuration is DA=ecdsa256 PK_ENC-ecdsa used
+
+Patches
+=======
+
+Please submit any patches against the meta-intel-sdo layer to the xxxx mailing list (xxxx@zzzz.org)
+and cc: the maintainer:
+
+Maintainer: Nabendu Maiti <nbmaiti@gmail.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-intel-sdo layer to your build
+
+
+I. Adding the meta-intel-sdo layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-intel-sdo'
+
+
