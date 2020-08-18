@@ -6,7 +6,7 @@ BB_STRICT_CHECKSUM = "0"
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fa818a259cbed7ce8bc2a22d35a464fc"
 
-SRCREV = "7e882c2f5de8f94efc2b4212616933c7d94b272b"
+SRCREV = "d5cbe0a5c060bbedfa75c42fb802cc3abe6b5d68"
 SRC_URI = "git://github.com/secure-device-onboard/client-sdk.git"
 #SRC_URI[sha256sum] = "c821a9afa9f987ac829fb3a8dd72122c3c612b0c25c9c0fe03201f7e1081f183"
 #SRC_URI[sha256sum] = "25aaa5ea90c023484f09027ae4e17d14dd5e927992a6d9717d0e954208a57f8f"

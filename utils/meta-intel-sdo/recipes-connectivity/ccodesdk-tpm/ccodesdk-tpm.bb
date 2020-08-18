@@ -6,7 +6,7 @@ LICENSE = "Apache-2.0"
 BB_STRICT_CHECKSUM = "0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fa818a259cbed7ce8bc2a22d35a464fc"
 
-SRCREV = "7e882c2f5de8f94efc2b4212616933c7d94b272b"
+SRCREV = "d5cbe0a5c060bbedfa75c42fb802cc3abe6b5d68"
 SRC_URI = "git://github.com/secure-device-onboard/client-sdk.git"
 ###SRC_URI[sha256sum] = "f21ab4d2f2ddf83feac2e6d98f79ae1ccf8fdff5ec03661d0a5240928c0d3d7f"
 
