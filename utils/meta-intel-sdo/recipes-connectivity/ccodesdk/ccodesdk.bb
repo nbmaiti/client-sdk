@@ -40,6 +40,10 @@ fi
 
 export SAFESTRING_ROOT=${CUR_DIR}/../safestringlib
 cd ${SAFESTRING_ROOT}
+rm -rf makefile
+sed -i '/mmitigate-rop/d' ./CMakeLists.txt
+cp libsafestring_static.a libsafestring.a
+cmake .
 make 
 
 cd ${S}

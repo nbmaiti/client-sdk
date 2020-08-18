@@ -29,8 +29,8 @@ INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_SYSROOT_STRIP = "1"
 FILES_${PN} += "/opt \
-                /opt/arm \
-                /opt/arm/linux-client" 
+                /opt/sdo \
+                /opt/sdo/linux-client" 
 
 
 do_configure(){
@@ -48,7 +48,11 @@ fi
 
 export SAFESTRING_ROOT=${CUR_DIR}/../safestringlib
 cd ${SAFESTRING_ROOT}
-make 
+rm -rf makefile
+sed -i '/mmitigate-rop/d' ./CMakeLists.txt
+cp libsafestring_static.a libsafestring.a
+cmake .
+make
 
 cd ${S}
 cmake -DTLS=mbedtls -DPK_ENC=ecdsa -DDA=ecdsa256 -DMANUFACTURER_TOOLKIT=true -DKEX=ecdh . ;
