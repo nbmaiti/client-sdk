@@ -46,7 +46,11 @@ if [ ! -d "safestringlib" ] ; then
 fi
 export SAFESTRING_ROOT=${CUR_DIR}/../safestringlib
 cd ${SAFESTRING_ROOT}
-make 
+rm -rf makefile
+sed -i '/mmitigate-rop/d' ./CMakeLists.txt
+cmake .
+make
+cp libsafestring_static.a libsafestring.a
 
 cd ${S}
 

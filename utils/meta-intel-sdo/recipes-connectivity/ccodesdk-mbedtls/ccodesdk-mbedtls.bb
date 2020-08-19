@@ -9,7 +9,6 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=fa818a259cbed7ce8bc2a22d35a464fc"
 SRCREV = "d5cbe0a5c060bbedfa75c42fb802cc3abe6b5d68"
 SRC_URI = "git://github.com/secure-device-onboard/client-sdk.git"
 #SRC_URI[sha256sum] = "c821a9afa9f987ac829fb3a8dd72122c3c612b0c25c9c0fe03201f7e1081f183"
-#SRC_URI[sha256sum] = "25aaa5ea90c023484f09027ae4e17d14dd5e927992a6d9717d0e954208a57f8f"
 
 S = "${WORKDIR}/git"
 
@@ -50,9 +49,9 @@ export SAFESTRING_ROOT=${CUR_DIR}/../safestringlib
 cd ${SAFESTRING_ROOT}
 rm -rf makefile
 sed -i '/mmitigate-rop/d' ./CMakeLists.txt
-cp libsafestring_static.a libsafestring.a
 cmake .
 make
+cp libsafestring_static.a libsafestring.a
 
 cd ${S}
 cmake -DTLS=mbedtls -DPK_ENC=ecdsa -DDA=ecdsa256 -DMANUFACTURER_TOOLKIT=true -DKEX=ecdh . ;
